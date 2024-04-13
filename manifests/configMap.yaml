@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-config
+  namespace: final
+data:
+  s3_uri: "s3://final-projects3/database.jpg"
