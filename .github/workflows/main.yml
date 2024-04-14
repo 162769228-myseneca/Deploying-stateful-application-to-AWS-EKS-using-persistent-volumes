@@ -1,4 +1,4 @@
-# rerunning after adding credentials
+# its working now
 name: Deploy to ECR mysql and webapp
 
 on: 
