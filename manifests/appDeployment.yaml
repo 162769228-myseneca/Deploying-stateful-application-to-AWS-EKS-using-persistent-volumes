@@ -4,16 +4,16 @@ metadata:
   name: my-app-deployment
   namespace: final
   labels:
-    appname: employee
+    app: employee
 spec:
   replicas: 1
   selector:
     matchLabels:
-      appname: employee
+      app: employee
   template:
     metadata:
       labels:
-        appname: employee
+        app: employee
     spec:
       containers:
       - name: employee
