@@ -8,7 +8,6 @@ metadata:
   annotations:
     volume.beta.kubernetes.io/storage-class: gp2
 spec:
-  storageClassName: default
   accessModes:
     - ReadWriteOnce
   resources:
