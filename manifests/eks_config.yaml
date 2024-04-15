@@ -4,7 +4,7 @@ kind: ClusterConfig
 metadata:
   name: clo835
   region: us-east-1
-  version: "1.22"
+  version: "1.29"
 
 availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
 
@@ -20,4 +20,4 @@ managedNodeGroups:
     iam:
       instanceRoleARN: arn:aws:iam::937545311489:role/LabRole
 
-namespace: final
+
