@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: employee
-        image: 937545311489.dkr.ecr.us-east-1.amazonaws.com/final:latest
+        image: 937545311489.dkr.ecr.us-east-1.amazonaws.com/webapp:v1
         env:
         - name: DBHOST
           value: "my-db-service.final.svc.cluster.local"
