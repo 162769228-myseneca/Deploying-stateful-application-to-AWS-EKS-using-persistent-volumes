@@ -18,7 +18,7 @@ spec:
       containers:
       - name: employee
         image: 937545311489.dkr.ecr.us-east-1.amazonaws.com/final:latest
-         env:
+        env:
         - name: DBHOST
           value: "my-db-service.final.svc.cluster.local"
         - name: DBPORT
@@ -31,11 +31,5 @@ spec:
           value: "root"
         ports:
         - containerPort: 81
-         volumeMounts:
-        - name: app-volume
-          mountPath: /app/static/tmp
-    volumes:
-        - name: app-volume
-          emptyDir: {}
       dnsPolicy: ClusterFirst
       restartPolicy: Always
