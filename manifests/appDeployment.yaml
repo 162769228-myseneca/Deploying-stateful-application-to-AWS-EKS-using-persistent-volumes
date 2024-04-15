@@ -23,8 +23,6 @@ spec:
           value: "my-db-service.final.svc.cluster.local"
         - name: DBPORT
           value: "3306"
-        - name: DATABASE
-          value: "employees"
         - name: DBPWD
           value: "pw"
         - name: DBUSER
