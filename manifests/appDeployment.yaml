@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+  namespace: final
+  labels:
+    appname: employee
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      appname: employee
+  template:
+    metadata:
+      labels:
+        appname: employee
+    spec:
+      containers:
+      - name: employee
+        image: 937545311489.dkr.ecr.us-east-1.amazonaws.com/final:latest
+         env:
+        - name: DBHOST
+          value: "my-db-service.final.svc.cluster.local"
+        - name: DBPORT
+          value: "3306"
+        - name: DATABASE
+          value: "employees"
+        - name: DBPWD
+          value: "pw"
+        - name: DBUSER
+          value: "root"
+        ports:
+        - containerPort: 81
+         volumeMounts:
+        - name: app-volume
+          mountPath: /app/static/tmp
+    volumes:
+        - name: app-volume
+          emptyDir: {}
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
