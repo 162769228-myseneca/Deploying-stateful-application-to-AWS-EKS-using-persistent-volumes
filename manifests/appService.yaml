@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+  namespace: final
+  labels:
+    app: employee
+spec:
+  selector:
+    app: employee
+  ports:
+    - protocol: TCP
+      name: employee
+      port: 81
+      targetPort: 81
+  type: LoadBalancer
